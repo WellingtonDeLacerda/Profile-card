@@ -1,0 +1,116 @@
+@charset 'UTF-8';
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--Family);
+}
+:root{
+    
+/* ## Colors */
+
+/* ### Primary */
+
+--CianoEscuro: hsl(185, 75%, 39%);
+--AzulDessaturadoMuitoEscuro: hsl(229, 23%, 23%);
+--AzulAcinzentadoEscuro: hsl(227, 10%, 46%);
+
+/* ### Neutral */
+
+--CinzaEscuro: hsl(0, 0%, 59%);
+
+/* ## Typography */
+
+/* ### Body Copy */
+
+--FontSize: 18px; /* (nome e estatísticas) */
+
+/* ### Font */
+
+--Family:Kumbh Sans;
+
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--CianoEscuro);
+    background-image: url('images/bg-pattern-top.svg'),url("images/bg-pattern-bottom.svg");
+    background-position: left top, right bottom;
+    background-repeat: no-repeat,no-repeat;
+    background-size:600px,600px ;
+}
+hr{
+    margin: 0px 10px;
+}
+section{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 330px;
+    background-color: white;
+    border-radius: 20px;
+}
+section img.foto{
+    position: absolute;
+    border: 6px solid white;
+    border-radius: 50%;
+    bottom: 50%;
+    left: 35%;
+    
+}
+section div.name{
+    display: block;
+    margin-top: 70px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+section div.name p{
+    color: var(--CinzaEscuro);
+}
+h3{
+    color: var(--AzulDessaturadoMuitoEscuro);
+}
+h3 > span{
+    color: var(--CinzaEscuro);
+}
+.d1{
+    text-align: center;
+    
+}
+.d1 p{
+    color: var(--CinzaEscuro);
+}
+
+section div.fundo{
+    background-image: url('images/bg-pattern-card.svg');
+    height: 130px;
+    width: 100%;
+    border-radius: 20px 20px 0px 0px;
+}
+section div.dados{
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0px;
+    
+}
+@media screen and (min-width:768px){
+    section{
+        width: 450px;
+        height: 500px;
+        font-size: 1.2em;
+    }
+    section img.foto{
+        width: 150px;
+        height: 150px;
+        bottom: 45%;
+    }
+    section div.name{
+        margin-top:100px ;
+    }
+    section div.fundo{
+        height: 200px;
+    }
+    
+}
